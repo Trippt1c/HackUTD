@@ -128,3 +128,7 @@ r = requests.post('https://finnhub.io/api/v1/webhook/delete?token=cdo4chiad3i5o5
 res = r.json()
 print(res)
 
+
+#####################################
+response = requests.get('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange')
+print(response.text)
