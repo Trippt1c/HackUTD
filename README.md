@@ -7,7 +7,7 @@ Risk Analyzer helps calculate the risk percentage of an investment portfolio (up
 ## Features
 - [X] **Calculates overall risk of portfolio and risk of each type of investment (stocks, bonds, etc.) in the portfolio**
 - [X] **Displays pie chart showing the risks mentioned above**
-- [X} **Calculates risk factor for each stock in the portfolio using data from APIs**
+- [X] **Calculates risk factor for each stock in the portfolio using data from APIs**
 - [X] **Displays table showing the stocks in the portfolio and each stock's current value, gains and losses, stock history, and calculated risk factor**
 - [X] **Displays current interest rate for the bonds and savings in the portfolio**
 
