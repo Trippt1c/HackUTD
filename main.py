@@ -6,6 +6,9 @@ from tkinter.ttk import *
 from tkinter.filedialog import askopenfile 
 import time
 
+import requests
+
+################################################### GUI stuff ###################################################
 # basic GUI app
 root = Tk()
 frm = ttk.Frame(root, padding=150)
@@ -37,7 +40,7 @@ def uploadFiles():
         pb1['value'] += 20
         time.sleep(1)
     pb1.destroy()
-    Label(root, text='File Uploaded Successfully!', foreground='green').grid(row=4, columnspan=3, pady=10)
+    Label(root, text='File Uploaded Successfully!', foreground='green').grid(row=4, columnspan=3, pady=1)
         
 chooseFileButton = Button(
     root, 
@@ -51,7 +54,7 @@ uploadFileButton = Button(
     text='Upload File',
     command=uploadFiles
     )
-uploadFileButton.grid(row=0, columnspan=3, pady=10)
+uploadFileButton.grid(row=0, columnspan=3, pady=1)
 
 
 
@@ -105,4 +108,23 @@ menubar.add_cascade(
 )
 
 root.mainloop()
+
+
+
+################################################### API stuff ###################################################
+# Register new webhook for earnings
+r = requests.post('https://finnhub.io/api/v1/webhook/add?token=cdo4chiad3i5o5ol2cg0cdo4chiad3i5o5ol2cgg', json={'event': 'earnings', 'symbol': 'AAPL'})
+res = r.json()
+print(res)
+
+webhook_id = res['id']
+# List webhook
+r = requests.get('https://finnhub.io/api/v1/webhook/list?token=cdo4chiad3i5o5ol2cg0cdo4chiad3i5o5ol2cgg')
+res = r.json()
+print(res)
+
+#Delete webhook
+r = requests.post('https://finnhub.io/api/v1/webhook/delete?token=cdo4chiad3i5o5ol2cg0cdo4chiad3i5o5ol2cgg', json={'id': webhook_id})
+res = r.json()
+print(res)
 
