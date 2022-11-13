@@ -16,4 +16,4 @@ Our team decided to work on this project after attending a workshop about implem
 tkinter (for the GUI) and requests (for API integration). None of us have coded much in Python, so this was a learning experience for us. Some of the challenges we faced
 included finding the factors that affect the risk of an investment, determining an algorithm to calculate the risk, and figuring out which APIs would be best to use and
 which data to use from the APIs. We are proud of the fact that we have a functioning program after studying Python on our own, and that we learned how to create a GUI
-and implement APIs in Python.
+and implement APIs in Python. While we couldn't implement every feature on the list, we have included them in our design for the project that we made using Figma.
