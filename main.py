@@ -1,3 +1,4 @@
+
 import requests
 
 # Register new webhook for earnings
@@ -15,3 +16,4 @@ print(res)
 r = requests.post('https://finnhub.io/api/v1/webhook/delete?token=cdo4chiad3i5o5ol2cg0cdo4chiad3i5o5ol2cgg', json={'id': webhook_id})
 res = r.json()
 print(res)
+
